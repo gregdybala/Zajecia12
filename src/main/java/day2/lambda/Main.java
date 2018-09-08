@@ -8,10 +8,13 @@ public class Main {
 
     private void sample() {
 
-        Func add = new Func() {
-            @Override
-            public int calc(int a, int b) {
-                return a + b;
+//        Func add = new Func() {
+//            @Override
+//            public int cal
+//
+//            c(int a, int b) {
+//                return a + b;
+//
 
             }
         };
