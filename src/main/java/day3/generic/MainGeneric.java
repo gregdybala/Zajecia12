@@ -56,6 +56,24 @@ public class MainGeneric {
         return something;
     }
 
+    private <T extends Person> T methodOfPerson(T person) {
+        if (person instanceof Student) {
+            person.someMethod("Student AAA");
+        }
+//        if (person instanceof Director) {
+//            person.someMethod("Director BBB");
+//        }
+//        if (person instanceof Teacher) {
+//            person.someMethod("Teacher CCC");
+//        }
+        return person;
+    }
+
+    private void sample5() {
+        Student student = new Student();
+        methodOfPerson(student);
+        System.out.println(student);
+    }
 
     public static void main(String[] args) {
 
@@ -64,6 +82,8 @@ public class MainGeneric {
         mainGeneric.sampleCalculator();
         System.out.println(mainGeneric.sampleGeneric(2, 3));
         System.out.println(mainGeneric.sampleGeneric(3.45, 4.67));
+
+        mainGeneric.sample5();
 
     }
 }

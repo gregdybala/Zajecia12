@@ -1,10 +1,12 @@
 package day3.generic;
 
 public abstract class Person {
-    String firstName;
-    String lastName;
-    int age;
-    Status status;
+    protected String firstName;
+    protected String lastName;
+    protected int age;
+    protected Status status;
+    protected String someA;
+
 
     public Person() {
 
@@ -62,5 +64,8 @@ public abstract class Person {
                 '}';
     }
 
-    
+    public void someMethod(String someA) {
+        this.someA = someA;
+        System.out.println(status.name() + " - " + someA);
+    }
 }
